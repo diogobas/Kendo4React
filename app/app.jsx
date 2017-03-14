@@ -1,14 +1,23 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var KendoGrid = require('KendoGrid');
+var FilterKendoGrid = require('FilterKendoGrid');
+
 
 //Load foundation
 $(document).foundation();
 
 //App class
-require('style!css!sass!applicationStyles')
+require('style!css!sass!applicationStyles');
+
+console.log("running");
 
 ReactDOM.render(
-  <p>Boilerplate 3 Project</p>,
+  <Router history={hashHistory}>
+    <Route path="/">
+      <IndexRoute component={FilterKendoGrid}/>
+    </Route>
+  </Router>,
   document.getElementById('app')
 );

@@ -5,6 +5,7 @@ module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
+    './Assets/kendo.all.js',
     './app/app.jsx'
   ],
   externals: {
@@ -23,6 +24,9 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
+      KendoGrid: 'app/components/KendoGrid.jsx',
+      FilterKendoGrid: 'app/components/FilterKendoGrid.jsx',
+      people: 'app/components/people.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
