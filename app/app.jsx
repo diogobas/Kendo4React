@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var KendoGrid = require('KendoGrid');
 var FilterKendoGrid = require('FilterKendoGrid');
+var FilterKendoGrid = require('FilterKendoGrid');
 
 
 //Load foundation

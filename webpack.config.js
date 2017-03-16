@@ -5,7 +5,7 @@ module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './Assets/kendo.all.js',
+    'script!kendo/js/kendo.all.js',
     './app/app.jsx'
   ],
   externals: {
@@ -39,7 +39,7 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules)/
       }
     ]
   },
