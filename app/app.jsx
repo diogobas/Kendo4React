@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var KendoGrid = require('KendoGrid');
-var FilterKendoGrid = require('FilterKendoGrid');
-var FilterKendoGrid = require('FilterKendoGrid');
 
+var FilterGridApp = require('FilterGridApp');
 
 //Load foundation
 $(document).foundation();
 
 //App class
-require('style!css!sass!applicationStyles');
-
-console.log("running");
+require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/">
-      <IndexRoute component={FilterKendoGrid}/>
-    </Route>
-  </Router>,
+  <FilterGridApp/>,
   document.getElementById('app')
 );

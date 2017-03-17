@@ -23,11 +23,17 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components',
+      './app/api'
+    ],
     alias: {
-      KendoGrid: 'app/components/KendoGrid.jsx',
-      FilterKendoGrid: 'app/components/FilterKendoGrid.jsx',
-      people: 'app/components/people.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      // KendoGrid: 'app/components/KendoGrid.jsx',
+      // FilterKendoGrid: 'app/components/FilterKendoGrid.jsx',
+      // people: 'app/components/people.jsx',
+      applicationStyles: 'app/styles/app.scss',
+      actions: 'app/actions/actions.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

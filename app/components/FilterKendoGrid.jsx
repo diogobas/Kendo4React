@@ -4,10 +4,9 @@ import * as people from 'people';
 class FilterKendoGrid extends Component {
 
     componentDidMount() {
-
       $("#FilterKendoGrid").kendoGrid({
         dataSource: {
-          data: people.createRandomData(50),
+          data: people.filterPeople(50, "Seattle"),
           schema: {
             model: {
               fields: {
@@ -79,11 +78,7 @@ class FilterKendoGrid extends Component {
 
     render() {
       return (
-        <div>
-          <div>
-            <div id = "FilterKendoGrid"></div>
-          </div>
-        </div>
+        <div id="FilterKendoGrid"></div>
       );
     }
 }
